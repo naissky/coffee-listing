@@ -28,7 +28,7 @@ export default function Card({
       className="rounded-xl hover:bg-background hover:bg-opacity-35 ease-in-out duration-200"
     >
       <div className="rounded-xl max-w-sm flex flex-col gap-2">
-        <img src={image} className="h-40 w-72 rounded-xl" />
+        <img src={image} className="h-40 w-72 rounded-xl hover:h-36 ease-in-out duration-300" />
 
         <div className="flex flex-row justify-between">
           <div className="flex flex-col gap-2 items-start">
