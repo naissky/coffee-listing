@@ -10,6 +10,7 @@ interface CardProps {
   rating: string;
   votes: string;
   popular?: boolean; // Etiqueta opcional de "Popular"
+  available?: boolean;
 }
 
 export default function Card({
@@ -19,6 +20,7 @@ export default function Card({
   rating,
   votes,
   popular = false,
+  available = true,
 }: CardProps) {
   return (
     <Link
@@ -35,7 +37,7 @@ export default function Card({
               <Heart />
               <TextLabel>{rating}</TextLabel>
               <TextLabel className="text-body-gray">({votes} votes)</TextLabel>
-              {}
+              {available ? available : <TextLabel className="text-[#ED735D] font-bold">Sold Out</TextLabel>}
             </div>
           </div>
           <div className="flex flex-col gap-2">

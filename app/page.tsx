@@ -11,6 +11,7 @@ interface Coffee {
   rating: string;
   votes: string;
   popular: boolean; // Aquí definimos que `votes` es un número
+  available: boolean;
 }
 
 export default async function Home() {
@@ -44,6 +45,7 @@ export default async function Home() {
               rating={item.rating === null ?"No rating" : item.rating}
               votes={item.votes}
               popular={item.popular}
+              available={item.available}
               />
             ))
           }
