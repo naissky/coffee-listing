@@ -9,6 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        'label': '#BEE3CC',
+        'card': '#1B1D1F',
+        'body-gray': '#6F757C',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
