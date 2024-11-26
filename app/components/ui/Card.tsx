@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Heart from "../Star";
 import TextBody from "./text/TextBody";
 import TextLabel from "./text/TextLabel";
@@ -23,12 +22,11 @@ export default function Card({
   available = true,
 }: CardProps) {
   return (
-    <Link
-      href={"/"}
-      className="rounded-xl hover:bg-background hover:bg-opacity-35 ease-in-out duration-200"
+    <div
+      className="rounded-xl hover:bg-background hover:bg-opacity-35 hover:pb-4 ease-in-out duration-200"
     >
       <div className="rounded-xl max-w-sm flex flex-col gap-2">
-        <img src={image} className="h-40 w-72 rounded-xl hover:h-36 ease-in-out duration-300" />
+        <img src={image} className="h-40 w-72 rounded-xl ease-in-out duration-300" />
 
         <div className="flex flex-row justify-between">
           <div className="flex flex-col gap-2 items-start">
@@ -52,6 +50,6 @@ export default function Card({
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

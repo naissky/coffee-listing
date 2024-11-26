@@ -4,5 +4,5 @@ interface TextHeaderProps {
 }
 
 export default function TextHeader({children, className}: TextHeaderProps){
-    return <h1 className={`text-2xl font-bold ${className}`}>{children}</h1>
+    return <h1 className={`text-4xl font-bold ${className}`}>{children}</h1>
 }
