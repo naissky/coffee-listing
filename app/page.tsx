@@ -16,6 +16,8 @@ interface Coffee {
 
 export default async function Home() {
   const coffe: Coffee[] = await getCoffee();
+  // Datos iniciales para probar el componente
+
   return (
     <main className="w-full flex flex-col items-center">
       <header className="h-72 w-full overflow-hidden">
@@ -35,21 +37,18 @@ export default async function Home() {
           </TextBody>
         </div>
         <div className="flex flex-col lg:flex-row flex-wrap items-center gap-8">
-          {
-            coffe.map((item, index) => (
-              <Card
+          {coffe.map((item, index) => (
+            <Card
               key={index}
               image={`${item.image}`}
               name={item.name}
               pricing={item.price}
-              rating={item.rating === null ?"No rating" : item.rating}
+              rating={item.rating === null ? "No rating" : item.rating}
               votes={item.votes}
               popular={item.popular}
               available={item.available}
-              />
-            ))
-          }
-          
+            />
+          ))}
         </div>
       </div>
     </main>
